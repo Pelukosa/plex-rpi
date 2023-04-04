@@ -5,11 +5,11 @@ services:
   samba:
     image: dperson/samba # no hay tag con versiones, solo latest
     restart: always
-    command: '-u "pi;password" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no"'
+    command: '-u "alejandro;password" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no"'
     stdin_open: true
     tty: true
     environment:
-      - TZ=America/Argentina/Mendoza
+      - TZ=Europe/Madrid
     ports:
       - 139:139
       - 445:445
@@ -27,7 +27,7 @@ services:
     #  - 32400:32400
     #  - 33400:33400
     environment:
-      - TZ=America/Argentina/Mendoza
+      - TZ=Europe/Madrid
     volumes:
       - ${STORAGE}/Plex Media Server:/root/Library/Application Support/Plex Media Server
       - ${MEDIA}:/media
