@@ -7,9 +7,9 @@ schedules:
 
 templates:
   tv:
-    regexp:
-      reject:
-        - x265: {from: title}
+#     regexp:
+#       reject:
+#         - x265: {from: title}
     series:
       settings:
         tv:
